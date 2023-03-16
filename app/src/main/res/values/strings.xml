@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Task_1</string>
+    <string name="add">Add</string>
+    <string name="subtract">Subtract</string>
+    <string name="multiply">Multiply</string>
+    <string name="division">Division</string>
+    <string name="number_1">Number_1</string>
+    <string name="number_2">Number_2</string>
+    <string name="reset">Reset</string>
+    <string name="activity1">Activity 2</string>
+</resources>
