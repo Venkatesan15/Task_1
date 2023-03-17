@@ -14,6 +14,7 @@ class Activity2 : AppCompatActivity() {
     lateinit var resBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_2)
 
@@ -29,6 +30,8 @@ class Activity2 : AppCompatActivity() {
         }
 
     }
+
+
     private fun getResult(process: String) {
 
         if (eNum1.text.toString().trim().isNotEmpty() && eNum2.text.toString().trim().isNotEmpty()) {
@@ -53,7 +56,7 @@ class Activity2 : AppCompatActivity() {
             finish()
         }
         else {
-            Toast.makeText(this,"Enter valid Input",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Enter Input",Toast.LENGTH_SHORT).show()
             setResult(RESULT_CANCELED,null)
         }
     }

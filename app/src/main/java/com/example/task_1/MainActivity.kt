@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var multiplyBtn: Button
     lateinit var divBtn: Button
     lateinit var resetBtn: Button
-    lateinit var res: TextView
+    lateinit var resultText: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         multiplyBtn = findViewById(R.id.mulBtn)
         divBtn = findViewById(R.id.divBtn)
         resetBtn = findViewById(R.id.resetBtn)
-        res = findViewById(R.id.textView)
+        resultText = findViewById(R.id.textView)
     }
 
 
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 multiplyBtn.visibility = View.VISIBLE
                 divBtn.visibility = View.VISIBLE
                 resetBtn.visibility = View.GONE
-                res.visibility = View.GONE
+                resultText.visibility = View.GONE
             }
         }
     }
@@ -91,16 +91,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             multiplyBtn.visibility = View.GONE
             divBtn.visibility = View.GONE
             resetBtn.visibility = View.VISIBLE
-            res.visibility = View.VISIBLE
+            resultText.visibility = View.VISIBLE
 
-            res.text = "Your Result is $ans for inputs $num1 and $num2 with action $action"
+            resultText.text = "Your Result is $ans for inputs $num1 and $num2 with action $action"
         }
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putString("Save", res.text.toString())
-        outState.putBoolean("Visible", res.visibility == View.VISIBLE)
+        outState.putString("Save", resultText.text.toString())
+        outState.putBoolean("Visible", resultText.visibility == View.VISIBLE)
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
@@ -111,8 +111,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             multiplyBtn.visibility = View.GONE
             divBtn.visibility = View.GONE
             resetBtn.visibility = View.VISIBLE
-            res.visibility = View.VISIBLE
-            res.text = savedInstanceState.getString("Save")
+            resultText.visibility = View.VISIBLE
+            resultText.text = savedInstanceState.getString("Save")
         }
     }
 
